@@ -1,0 +1,3 @@
+notebook
+python-language-server[all]
+python-jsonrpc-server
