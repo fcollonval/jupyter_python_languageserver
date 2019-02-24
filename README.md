@@ -11,6 +11,7 @@ Palantir Python Language Server installed as a Jupyter Notebook Server extension
 
 Installation / Usage
 --------------------
+You will need [python-language-server](https://github.com/palantir/python-language-server) & [python-jsonrpc-server](https://github.com/palantir/python-jsonrpc-server) installed.
 
 To install use pip:
 

@@ -5,7 +5,11 @@ import threading
 
 from tornado import ioloop, process, web, websocket, gen
 
-from jsonrpc import streams
+try:
+    from pyls_jsonrpc import streams
+except ImportError:
+    # Name of Python package prior to version 0.1.0
+    from jsonrpc import streams
 
 
 class LanguageServerWebSocketHandler(websocket.WebSocketHandler):
@@ -14,11 +18,9 @@ class LanguageServerWebSocketHandler(websocket.WebSocketHandler):
     writer = None
 
     def open(self, *args, **kwargs):
-        # log.debug("Spawning pyls subprocess")
-
         # Create an instance of the language server
         proc = process.Subprocess(
-            ['pyls'], #'-vvv'],
+            ['pyls'], # '-vvv'],
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE
         )
