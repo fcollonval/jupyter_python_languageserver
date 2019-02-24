@@ -1,7 +1,7 @@
 Palantir Python Language Server as Jupyter Notebook Server Extension
 ===============================
 
-version number: 0.1.0
+version number: 0.1.1  
 author: Jupyter Development Team
 
 Overview
